@@ -1,9 +1,12 @@
 @use "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
 html,
 body {
-     @apply bg-black text-white;
+    @apply bg-black text-white;
+    font-family: "Poppins", sans-serif;
 }
+
 
 .bg-main {
     background-image: url('assets/img/bg.webp');
@@ -12,4 +15,14 @@ body {
     background-position: 100% 0%;
     background-size: cover;
     min-height: 100vh;
+}
+
+.button {
+    @apply bg-white text-black py-2 px-4 border hover:border-transparent hover:bg-transparent hover:text-white rounded-full;
+    border-color: white;
+}
+
+.button-clear {
+    @apply bg-transparent text-white py-2 px-4 border hover:border-transparent rounded-full;
+    border-color: white;
 }

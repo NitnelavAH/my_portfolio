@@ -1,0 +1,21 @@
+<div class="relative inline-block">
+    <button (click)="toggleDropdown()"
+        class="border bg-transparent border-transparent text-gray-900 text-sm rounded-lg
+        focus:border-gray-600 block w-full p-2 placeholder-gray-400 text-white
+        focus:ring-blue-500 flex items-center">
+        <img [src]="activeLang | icon" [alt]="activeLang" class="w-5 h-5">
+    </button>
+    @if(dropdownOpen()) {
+    <div class="absolute w-full rounded-lg shadow-lg">
+        <ul class="py-1">
+            @for (lang of availableLangs(); track $index; let last = $last) {
+            <li (click)="changeLang(lang.id)" 
+                class="flex items-center p-2 cursor-pointerhover:bg-gray-600 rounded-lg" 
+                [ngClass]="{'bg-gray-700': activeLang === lang.id}">
+                <img [src]="lang.id | icon" [alt]="lang.id" class="w-5 h-5">
+            </li>
+            }
+        </ul>
+    </div>
+    }
+</div>

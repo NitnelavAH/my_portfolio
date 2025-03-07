@@ -1,0 +1,14 @@
+<nav class="text-white top-0 absolute z-50 w-full bg-black shadow-md" *transloco="let t; prefix: 'navbar'">
+    <div class="max-w-7xl m-auto flex justify-end gap-4 px-2 py-3">
+        <a class="button-clear"  routerLink="/about">
+            {{ t('about') }}
+        </a>
+        <a class="button" routerLink="/contact">
+                {{ t('contact') }}
+        </a>
+
+
+        <app-lang-toggle></app-lang-toggle>
+    </div>
+
+</nav>
