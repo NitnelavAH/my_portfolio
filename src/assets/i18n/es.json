@@ -2,5 +2,28 @@
     "navbar": {
         "about": "Acerca de",
         "contact": "Contacto"
+    },
+    "me": {
+        "name": "Valentin Abundo",
+        "specialty": "Frontend Developer",
+        "description": "Desarrollador apasionado especializado en Angular, Ionic, Capacitor y Flutter, comprometido con la creación de aplicaciones multiplataforma de alto rendimiento y con experiencias de usuario excepcionales."
+    },
+    "about": {
+        "title": "Acerca de mí",
+        "description": "Ingeniero en computación con preferencia por el trabajo práctico, activo, un organizador que se asegura de que las cosas marchen bien, y un persuasor a quien le gusta lograr las cosas. Experiencia en el desarrollo web y el desarrollo móvil multiplataforma, soy una persona responsable, honesta y autodidacta para la mejora continua de mis habilidades.",
+        "skills": "Habilidades y tecnologías",
+        "skillPhrase": "Si no lo sabemos, lo aprendemos",
+        "languages": "👨‍💻 Lenguajes",
+        "styles": "🎨 Estilos & UI",
+        "frameworks": "🛠️ Frameworks",
+        "tools": "⚡ Herramientas",
+        "optimization": "🚀 Optimización",
+        "testing": "🧪 Testing",
+        "other": "🤔 Otros",
+        "basic": "😬 Básico",
+        "medium": "😄 Medio",
+        "good": "🫡 Bueno",
+        "level": "Nivel"
+
     }
 }

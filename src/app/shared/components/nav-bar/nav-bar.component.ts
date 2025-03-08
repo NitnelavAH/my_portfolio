@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
-import { RouterLink} from '@angular/router';
+import { Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { TranslocoModule } from '@jsverse/transloco';
 import { LangToggleComponent } from '../lang-toggle/lang-toggle.component';
+import { isPlatformBrowser } from '@angular/common';
+import { SubSink } from 'subsink';
 
 @Component({
   selector: 'app-nav-bar',
@@ -12,6 +14,44 @@ import { LangToggleComponent } from '../lang-toggle/lang-toggle.component';
   ],
   templateUrl: './nav-bar.component.html',
 })
-export class NavBarComponent {
+export class NavBarComponent implements OnInit, OnDestroy {
 
+  private subs = new SubSink();
+
+
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: string,
+    private activateRoute: ActivatedRoute
+  ) {
+
+  }
+
+  ngOnInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      this.subs.add(
+        this.activateRoute.fragment.subscribe((fragment) => {
+          if(!fragment) {
+            this.scrollTop();
+            return;
+          }
+          this.scrollToSection(fragment as string);
+        })
+      );
+    }
+  }
+
+  ngOnDestroy(): void {
+    this.subs.unsubscribe();
+  }
+
+  private scrollToSection(section: string) {
+    const element = document.getElementById(section);
+    if(element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  public scrollTop() {
+    window.scroll({ top: 0, behavior: 'smooth' });
+  }
 }
