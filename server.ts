@@ -1,5 +1,6 @@
 import { APP_BASE_HREF } from '@angular/common';
 import { CommonEngine } from '@angular/ssr/node';
+import { render } from '@netlify/angular-runtime/common-engine'
 import express from 'express';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
@@ -13,6 +14,7 @@ export function app(): express.Express {
   const indexHtml = join(serverDistFolder, 'index.server.html');
 
   const commonEngine = new CommonEngine();
+  
 
   server.set('view engine', 'html');
   server.set('views', browserDistFolder);
@@ -55,3 +57,17 @@ function run(): void {
 }
 
 run();
+
+
+const commonEngine = new CommonEngine()
+
+export async function netlifyCommonEngineHandler(request: Request, context: any): Promise<Response> {
+  // Example API endpoints can be defined here.
+  // Uncomment and define endpoints as necessary.
+  // const pathname = new URL(request.url).pathname;
+  // if (pathname === '/api/hello') {
+  //   return Response.json({ message: 'Hello from the API' });
+  // }
+
+  return await render(commonEngine)
+}
