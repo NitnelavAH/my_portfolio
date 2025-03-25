@@ -1,5 +1,5 @@
-<div class="flex flex-col items-center my-16 flex-direction-column" *transloco="let t; prefix: 'about'">
-    <h2 class="font-bold text-4xl mt-8">
+<div class="flex flex-col items-center my-4 flex-direction-column" *transloco="let t; prefix: 'about'">
+    <h2 class="font-bold text-4xl">
         {{ t('title') }}
     </h2>
 
@@ -7,44 +7,5 @@
         {{ t('description') }}
     </p>
 
-    <h3 class="font-bold text-3xl mt-8 text-center">
-        {{t('skills')}}
-    </h3>
-    <p class="text-gradient text-center font-medium">
-        {{t('skillPhrase')}}
-    </p>
-
-    <div class="flex flex-col mt-8">
-        @for (skill of mySkills(); track $index) {
-            <div class="flex my-3 flex-wrap gap-[16px]">
-                <span class="font-bold">
-                    {{t(skill.type)}}:
-                </span>
-
-                <div class="flex flex-wrap gap-[10px]">
-                    @for (item of skill.skills; track $index) {
-                        <span class="rounded-full py-1 px-2 text-sm" [ngClass]="getSkillLevelClass(item.level)">
-                            {{item.name}}
-                        </span>
-                    }
-                </div>
-            </div>
-        }
-
-    </div>
-
-    <p class="text-center font-medium mt-4">
-        {{t('level')}}
-    </p>
-    <div class="flex justify-center gap-[10px]">
-        @for (level of skillLevels; track $index) {
-            <span class="rounded-full py-1 px-2 text-sm" 
-            [ngClass]="getSkillLevelClass(level[1])">
-                {{t(level[1])}}
-            </span>
-        }
-    </div>
-
-    
 </div>
 

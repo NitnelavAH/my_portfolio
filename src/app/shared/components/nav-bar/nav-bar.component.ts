@@ -1,5 +1,5 @@
 import { Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { TranslocoModule } from '@jsverse/transloco';
 import { LangToggleComponent } from '../lang-toggle/lang-toggle.component';
 import { isPlatformBrowser } from '@angular/common';
@@ -8,7 +8,6 @@ import { SubSink } from 'subsink';
 @Component({
   selector: 'app-nav-bar',
   imports: [
-    RouterLink,
     TranslocoModule,
     LangToggleComponent
   ],

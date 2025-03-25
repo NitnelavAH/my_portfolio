@@ -1,7 +1,8 @@
 {
     "navbar": {
         "about": "Acerca de",
-        "contact": "Contacto"
+        "contact": "Contacto",
+        "resume": "CV"
     },
     "me": {
         "name": "Valentin Abundo",
@@ -10,7 +11,9 @@
     },
     "about": {
         "title": "Acerca de mí",
-        "description": "Ingeniero en computación con preferencia por el trabajo práctico, activo, un organizador que se asegura de que las cosas marchen bien, y un persuasor a quien le gusta lograr las cosas. Experiencia en el desarrollo web y el desarrollo móvil multiplataforma, soy una persona responsable, honesta y autodidacta para la mejora continua de mis habilidades.",
+        "description": "Ingeniero en computación con preferencia por el trabajo práctico, activo, un organizador que se asegura de que las cosas marchen bien, y un persuasor a quien le gusta lograr las cosas. Experiencia en el desarrollo web y el desarrollo móvil multiplataforma, soy una persona responsable, honesta y autodidacta para la mejora continua de mis habilidades."
+    },
+    "skills": {
         "skills": "Habilidades y tecnologías",
         "skillPhrase": "Si no lo sabemos, lo aprendemos",
         "languages": "👨‍💻 Lenguajes",
@@ -24,6 +27,5 @@
         "medium": "😄 Medio",
         "good": "🫡 Bueno",
         "level": "Nivel"
-
     }
 }
