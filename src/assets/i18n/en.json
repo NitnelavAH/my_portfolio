@@ -27,5 +27,9 @@
         "medium": "😄 Medium",
         "good": "🫡 Good",
         "level": "Level"
+    },
+    "experience": {
+        "title": "Experience",
+       "subtitle": "Work Experience"
     }
 }
