@@ -15,7 +15,8 @@ export enum SkillType {
     Tools = "tools",
     Optimization = "optimization",
     Testing = "testing",
-    Other = "other"
+    Other = "other",
+    Databases = "db"
 }
 
 export enum SkillLevel {

@@ -58,6 +58,16 @@ const skillCategories: Skill[] = [
     ],
   },
   {
+    type: SkillType.Databases,
+    skills: [
+      { name: "MySQL", level: SkillLevel.Basic },
+      { name: "MongoDB", level: SkillLevel.Basic },
+      { name: "SQL", level: SkillLevel.Basic },
+      { name: "Firestore", level: SkillLevel.Good },
+      { name: "Realtime Database", level: SkillLevel.Basic },
+    ],
+  },
+  {
     type: SkillType.Other,
     skills: [
       { name: "Google Play Deployment", level: SkillLevel.Medium },
