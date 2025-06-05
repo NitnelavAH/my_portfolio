@@ -12,16 +12,15 @@ import { environment } from '../environments/environment.development';
     styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
-    private analytics = inject(Analytics);
+/*     private analytics = inject(Analytics); */
 
     private platform = inject(PLATFORM_ID);
 
 
     ngOnInit(): void {
-        console.log(environment.firebaseConig)
-        if (isPlatformBrowser(this.platform)) {
+       /*  if (isPlatformBrowser(this.platform)) {
             const date = new Date().toISOString();
             logEvent(this.analytics, "visitor_detected", {date})
-        }
+        } */
     }
 }

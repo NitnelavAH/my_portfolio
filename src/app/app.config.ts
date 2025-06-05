@@ -30,10 +30,10 @@ export const appConfig: ApplicationConfig = {
       },
       loader: TranslocoHttpLoader
     }), 
-    provideFirebaseApp(() => initializeApp(environment.firebaseConig)), 
+/*     provideFirebaseApp(() => initializeApp(environment.firebaseConig)), 
     provideAnalytics(() => getAnalytics()), 
     ScreenTrackingService, 
-    provideFirestore(() => getFirestore()),
+    provideFirestore(() => getFirestore()), */
 
   ]
 };

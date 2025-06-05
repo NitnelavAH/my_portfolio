@@ -166,7 +166,6 @@ export class ExperienceComponent implements OnInit {
   }
 
   private loadExperiences() {
-    console.log('first')
     const lang = this.translocoService.getActiveLang();
 
     if (lang === 'en') {

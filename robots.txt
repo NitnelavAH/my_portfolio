@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Prevent crawling of unnecessary files
+Disallow: /assets/*.map
+Disallow: /*.ts$
+Disallow: /*.scss$
+Disallow: /node_modules/
+
+# Sitemap (optional but recommended)
+Sitemap: https://valentin-abundo.netlify.app/sitemap.xml
