@@ -21,7 +21,7 @@ export class LangToggleComponent implements OnDestroy, OnInit {
   private subscription: Subscription | null = null;
   private platform = inject(PLATFORM_ID);
 
-  constructor(private translocoService: TranslocoService) {
+  constructor() {
     if (isPlatformBrowser(this.platform)) {
       this.setInitialLanguage();
     }
@@ -32,7 +32,7 @@ export class LangToggleComponent implements OnDestroy, OnInit {
     const browserLang = navigator.language.split('-')[0]; // only "es", "en", etc.
     const availableLangs = (this.service.getAvailableLangs() as LangDefinition[]).map((lang) => lang.id);
     const langToSet = availableLangs.includes(browserLang) ? browserLang : 'en';
-    this.translocoService.setActiveLang(langToSet);
+    this.service.setActiveLang(langToSet);
 
   }
 

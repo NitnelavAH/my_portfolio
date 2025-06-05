@@ -1,4 +1,13 @@
 export const environment = {
     production: false,
     baseUrl: 'http://localhost:4200',
+    firebaseConig: {
+        projectId: import.meta.env["NG_APP_projectId"],
+        appId: import.meta.env["NG_APP_appId"],
+        storageBucket: import.meta.env["NG_APP_storageBucket"],
+        apiKey: import.meta.env["NG_APP_apiKey"],
+        authDomain: import.meta.env["NG_APP_authDomain"],
+        messagingSenderId: import.meta.env["NG_APP_messagingSenderId"],
+        measurementId: import.meta.env["NG_APP_measurementId"],
+    },
 };

@@ -9,14 +9,14 @@
     </p>
 
     <div class="flex flex-col mt-4">
-        @for (skill of mySkills(); track $index) {
+        @for (skill of mySkills(); track skill.type) {
             <div class="flex my-3 flex-wrap gap-[16px]">
                 <span class="font-bold">
                     {{t(skill.type)}}:
                 </span>
     
                 <div class="flex flex-wrap gap-[10px]">
-                    @for (item of skill.skills; track $index) {
+                    @for (item of skill.skills; track item.name) {
                         <span class="rounded-full py-1 px-2 text-sm" [ngClass]="getSkillLevelClass(item.level)">
                             {{item.name}}
                         </span>

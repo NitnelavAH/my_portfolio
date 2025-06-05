@@ -30,6 +30,7 @@ const skillCategories: Skill[] = [
       { name: "Ionic", level: SkillLevel.Good },
       { name: "Flutter", level: SkillLevel.Medium },
       { name: "Swift UI", level: SkillLevel.Basic },
+      { name: "React", level: SkillLevel.Basic },
     ],
   },
   {

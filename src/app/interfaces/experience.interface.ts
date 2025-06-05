@@ -1,4 +1,5 @@
 export interface Experience {
+    id: string;
     startYear: number;
     endYear: number;
     current?: boolean;

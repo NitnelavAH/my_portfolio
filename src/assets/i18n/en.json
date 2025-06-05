@@ -13,12 +13,12 @@
         "title": "About Me",
         "description": "Computer engineer with a preference for hands-on, active work, an organizer who makes sure things run smoothly, and a persuader who likes to get things done. Experience in web development and multiplatform mobile development, I am a responsible, honest and self-taught person for the continuous improvement of my skills."
     },
-    "skills": { 
+    "skills": {
         "skills": "Skills & Technologies",
         "skillPhrase": "If we don't know it, we learn it",
         "languages": "👨‍💻 Languages",
         "styles": "🎨 Styles & UI",
-        "frameworks": "🛠️ Frameworks",
+        "frameworks": "🛠️ Frameworks & Libraries",
         "tools": "⚡ Tools",
         "optimization": "🚀 Optimization",
         "testing": "🧪 Testing",
@@ -31,6 +31,7 @@
     },
     "experience": {
         "title": "Experience",
-       "subtitle": "Work Experience"
+        "subtitle": "Work Experience",
+        "current": "Current"
     }
 }

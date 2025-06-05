@@ -18,7 +18,7 @@
         "skillPhrase": "Si no lo sabemos, lo aprendemos",
         "languages": "👨‍💻 Lenguajes",
         "styles": "🎨 Estilos & UI",
-        "frameworks": "🛠️ Frameworks",
+        "frameworks": "🛠️ Frameworks & Librerias",
         "tools": "⚡ Herramientas",
         "optimization": "🚀 Optimización",
         "testing": "🧪 Testing",
@@ -31,6 +31,7 @@
     },
     "experience": {
         "title": "Experiencia",
-       "subtitle": "Experiencia laboral"
+        "subtitle": "Experiencia laboral",
+        "current": "Actual"
     }
 }

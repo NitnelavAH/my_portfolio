@@ -1,51 +1,59 @@
 
-<div *transloco="let t; prefix: 'experience'" class="flex flex-col items-center flex-direction-column max-w-[720px]">
 
-    <h3 class="font-bold text-3xl mt-10 text-center">
-        {{t('title')}}
-    </h3>
-    <p class="text-gradient text-center font-medium">
-        {{t('subtitle')}}
-    </p>
-
-    @for (e of experiences; track $index) {
-        <div class="flex flex-col mt-[32px] w-full">
-            <div class="flex justify-evenly flex-wrap  gap-[32px] w-full">
-                <div class="flex gap-[8px] font-bold">
-                    <h4>
-                        {{e.title}}
-                    </h4>
-                    /
-                    @if(e.companyUrl) {
-                        <a class="text-slate-300" [href]="e.companyUrl" target="_blank">
-                            {{e.company}}
-                        </a>
-                    } @else {
-                        <h4 class="text-slate-300">
-                            {{e.company}}
+<div class="w-full flex justify-center">
+    <div *transloco="let t; prefix: 'experience'" class="flex flex-col items-center flex-direction-column max-w-[720px]">
+    
+        <h3 class="font-bold text-3xl mt-10 text-center">
+            {{t('title')}}
+        </h3>
+        <p class="text-gradient text-center font-medium">
+            {{t('subtitle')}}
+        </p>
+    
+        @for (e of experiences(); track e.id) {
+            <div class="flex flex-col mt-[32px] w-full">
+                <div class="flex justify-evenly flex-wrap gap-[32px] w-full">
+                    <div class="flex flex-wrap justify-center gap-[8px] font-bold md:text-xl rounded-full py-1 px-2 bg-slate-500/30">
+                        <h4>
+                            {{e.title}}
                         </h4>
+                        /
+                        @if(e.companyUrl) {
+                            <a class="text-slate-300" [href]="e.companyUrl" target="_blank">
+                                {{e.company}}
+                            </a>
+                        } @else {
+                            <h4 class="text-slate-300">
+                                {{e.company}}
+                            </h4>
+                        }
+                    </div>
+    
+                    <div class="flex gap-[8px] font-bold py-1 px-2">
+                        <span>
+                            {{e.startYear}}
+                        </span>
+                        -
+                        <span>
+                            @if(e.endYear > 0) {
+                                {{e.endYear}}
+                            } @else {
+                                {{t('current')}}
+                            }
+                        </span>
+    
+                    </div>
+                </div>
+    
+                <ul class="mt-8 list-disc list-inside space-y-2">
+                    @for (a of e.activities; track $index) {
+                        <li class="p-2 text-base tracking-wider font-light">
+                            {{a}}
+                        </li>
                     }
-                </div>
-
-                <div class="flex gap-[8px] font-bold">
-                    <span>
-                        {{e.startYear}}
-                    </span>
-                    -
-                    <span>
-                        {{e.endYear}}
-                    </span>
-
-                </div>
+                </ul>
+                
             </div>
-
-            <ul class="mt-8">
-                @for (a of e.activities; track $index) {
-                    <p class="p-2">
-                        {{a}}
-                    </p>
-                }
-            </ul>
-        </div>
-    }
+        }
+    </div>
 </div>
