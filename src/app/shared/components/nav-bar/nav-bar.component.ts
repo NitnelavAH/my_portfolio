@@ -17,7 +17,7 @@ import { Analytics, logEvent } from '@angular/fire/analytics';
 export class NavBarComponent implements OnInit, OnDestroy {
 
   private subs = new SubSink();
-/*   private analytics = inject(Analytics); */
+  private analytics = inject(Analytics);
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: string,
@@ -45,10 +45,10 @@ export class NavBarComponent implements OnInit, OnDestroy {
   }
 
   public eventResume() {
- /*    const date = new Date().toISOString();
+    const date = new Date().toISOString();
     if (isPlatformBrowser(this.platformId)) {
       logEvent(this.analytics, "resume_view", { date })
-    } */
+    }
   }
 
   public scrollTop() {

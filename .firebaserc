@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "myportfolio-5e339"
+  },
+  "targets": {
+    "myportfolio-5e339": {
+      "hosting": {
+        "prod": [
+          "valentin-abundo"
+        ]
+      }
+    }
   }
 }
