@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:myportfolio": "node dist/my-portfolio/server/server.mjs",
-    "deploy": "netlify deploy --build --prod"
+    "deploy": "ng build --output-path=dist/static-site --configuration=production && netlify deploy"
   },
   "private": true,
   "dependencies": {
