@@ -9,7 +9,7 @@
     "test": "ng test",
     "serve:ssr:myportfolio": "node dist/my-portfolio/server/server.mjs",
     "deploy:netlify": "netlify deploy --build --prod",
-     "deploy:prod": "ng build --configuration=production && firebase deploy --only hosting:prod"
+    "deploy:prod": "ng build --configuration=production && firebase deploy --only hosting:prod"
   },
   "private": true,
   "dependencies": {

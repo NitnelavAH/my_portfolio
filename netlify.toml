@@ -1,0 +1,38 @@
+headers = []
+
+[functions]
+
+[functions."*"]
+
+[[plugins]]
+origin = "default"
+package = "@netlify/angular-runtime"
+
+[plugins.inputs]
+
+[build]
+publish = "/dist/my-portfolio/browser"
+publishOrigin = "ui"
+commandOrigin = "ui"
+base = "/"
+command = "npm run build"
+
+[[redirects]]
+from = "/*"
+to = "https://valentin-abundo.web.app"
+status = 301
+force = true
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
