@@ -9,7 +9,7 @@ const experiences: Experience[] = [
   {
     id: uuidv4(),
     startYear: 2021,
-    endYear: -1,
+    endYear: 2025,
     title: 'Frontend Developer',
     activities: [
       'Developed web & mobile apps (eCommerce, TMS, content managers, quoters, etc) using Angular, Ionic & Flutter.',
@@ -76,7 +76,7 @@ const experiencesEs: Experience[] = [
   {
     id: uuidv4(),
     startYear: 2021,
-    endYear: -1,
+    endYear: 2025,
     title: 'Frontend Developer',
     activities: [
       'Desarrollo de aplicaciones web y móviles(eCommerce, TMS, gestores de contenido, cotizadores, etc), usando Angular, Ionic y Flutter.',

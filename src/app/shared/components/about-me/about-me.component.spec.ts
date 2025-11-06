@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AboutMeComponent } from './about-me.component';
+import { provideExperimentalZonelessChangeDetection } from '@angular/core';
+import { getTranslocoModule } from '../../../transloco-testing.module';
 
 describe('AboutMeComponent', () => {
   let component: AboutMeComponent;
@@ -8,7 +10,8 @@ describe('AboutMeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AboutMeComponent]
+      imports: [AboutMeComponent, getTranslocoModule()],
+      providers: [provideExperimentalZonelessChangeDetection()]
     })
     .compileComponents();
 

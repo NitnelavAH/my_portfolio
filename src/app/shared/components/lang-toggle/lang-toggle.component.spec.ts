@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LangToggleComponent } from './lang-toggle.component';
 import { provideExperimentalZonelessChangeDetection } from '@angular/core';
+import { getTranslocoModule } from '../../../transloco-testing.module';
 
 
 
@@ -12,7 +13,7 @@ describe('LangToggleComponent', () => {
   let component: LangToggleComponent;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LangToggleComponent],
+      imports: [LangToggleComponent, getTranslocoModule()],
       providers: [provideExperimentalZonelessChangeDetection()]
     }).compileComponents();
     fixture = TestBed.createComponent(LangToggleComponent);

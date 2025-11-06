@@ -8,7 +8,8 @@ import { isPlatformBrowser } from '@angular/common';
     selector: 'app-root',
     imports: [RouterOutlet, NavBarComponent],
     templateUrl: './app.component.html',
-    styleUrl: './app.component.scss'
+    styleUrl: './app.component.scss',
+    standalone: true
 })
 export class AppComponent implements OnInit {
     private analytics = inject(Analytics);

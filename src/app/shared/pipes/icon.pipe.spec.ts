@@ -11,7 +11,7 @@ describe('IconPipe', () => {
     const pipe = new IconPipe();
     const url = pipe.transform('es');
     console.log(url)
-    expect(url).toContain('spanish.png');
+    expect(url).toContain('spanish.webp');
   });
 
   it('should return url of icons object', () => {
